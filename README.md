@@ -4,9 +4,11 @@
 
 in contrast to other approaches **enums** parses a special comment section to compose the enum type definition - instead of AST parsing to get the specs. **enums** will create a go file in the same folder sharing the package name and including all code lines to implement the enum. therefore the the enum's name, type and const definition should not be given in the code go file that calls the generator. 
 
+**enums** deals with double values by commenting out lines that hinder building the output file. try out the example to learn more. 
+
 #### load & install ####
 
-```golang
+```sh
   $ go get -u github.com/AndreasBriese/enums
 ```
 
@@ -20,7 +22,7 @@ for the enum(s) to be generated include a line `//go:generate enums $GOFILE` in 
 
 // [@enums
 // type colors int
-// -Grau colr = iota + 1
+// -Grau colors = iota + 1
 // -Weiss
 // -Gelb
 // -Lila = Weiss
@@ -28,10 +30,10 @@ for the enum(s) to be generated include a line `//go:generate enums $GOFILE` in 
 
 ```
 
-#### call #### 
+and call enums in the folder containing the go file by 
 
-```golang
-  $ go generate
+```sh
+  $ go generate <YOURFile.go>
 ```
 
 in the same folder will result in a file "colors_enums.go" that holds this code:
@@ -70,6 +72,32 @@ func (t colors) String() string {
 colors has got a method String() satisfying the interface `fmt.Stringer` to print out the color names and an array `colors_Constants` that can be used to loop over the enum i.e. to search for a color constant.   
 
 note that eventually all information on the type will be public if given a Uppercase type name in the encoding section. 
+
+#### try ####
+
+change into example folder and run 
+
+```sh
+$ go generate 
+generated enum type 'colors' in colors_enums.go
+generated enum type 'values' in values_enums.go
+$ go run *.go
+List of colors constants:
+colors_Constants[0] = 1 translating to "Grau"
+colors_Constants[1] = 2 translating to "Weiss"
+colors_Constants[2] = 3 translating to "Gelb"
+colors_Constants[3] = 4 translating to "Grün"
+colors_Constants[4] = 5 translating to "Rot"
+colors_Constants[5] = 6 translating to "Blau"
+colors_Constants[6] = 2 translating to "Weiss"
+List of values constants:
+values_Constants[0] = 3.141593 translating to "pi"
+values_Constants[1] = 6.283185 translating to "pi2"
+values_Constants[2] = 9.424778 translating to "pi3"
+values_Constants[3] = 12.566371 translating to "pi4"
+values_Constants[4] = 3.141593 translating to "pi"
+values_Constants[5] = 31.415927 translating to "pi10"
+```
 
 #### License ####
 
