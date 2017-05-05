@@ -1,8 +1,8 @@
 ## enums : a Go enum generator ##
 
-*enums* uses go generate functionality to produce text/template encoded go files within the same folder, that hold the enum like constant constructs.
+**enums** uses go generate functionality to produce text/template encoded go files within the same folder, that hold the enum like constant constructs.
 
-in contrast to other approaches *enums* parses a special comment section to compose the enum type definition - instead of AST parsing to get the specs. *enums* will create a go file in the same folder sharing the package name and including all code lines to implement the enum. therefore the the enum's name, type and const definition should not be given in the code go file that calls the generator. 
+in contrast to other approaches **enums** parses a special comment section to compose the enum type definition - instead of AST parsing to get the specs. **enums** will create a go file in the same folder sharing the package name and including all code lines to implement the enum. therefore the the enum's name, type and const definition should not be given in the code go file that calls the generator. 
 
 #### load & install ####
 
@@ -28,7 +28,7 @@ for the enum(s) to be generated include a line `//go:generate enums $GOFILE` in 
 
 ```
 
-from this *enums* will result in a file "colors_enums.go" that holds this code:
+from this **enums** will result in a file "colors_enums.go" that holds this code:
 
 ```golang
 
