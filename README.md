@@ -64,10 +64,9 @@ func (t colors) String() string {
 		return "Weiss"
 	case Gelb:
 		return "Gelb"
-	}
 //	case Lila:
 //		return "Lila"
-
+	}
 	return ""
 }
 ```
