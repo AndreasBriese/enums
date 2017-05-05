@@ -87,20 +87,20 @@ generated enum type 'colors' in colors_enums.go
 generated enum type 'values' in values_enums.go
 $ go run *.go
 List of colors constants:
-colors_Constants[0] = 1 translating to "Grau"
-colors_Constants[1] = 2 translating to "Weiss"
-colors_Constants[2] = 3 translating to "Gelb"
-colors_Constants[3] = 4 translating to "Grün"
-colors_Constants[4] = 5 translating to "Rot"
-colors_Constants[5] = 6 translating to "Blau"
-colors_Constants[6] = 2 translating to "Weiss"
+colors_Constants[0] = 1 corresponds to the constant named "Grau"
+colors_Constants[1] = 2 corresponds to the constant named "Weiss"
+colors_Constants[2] = 3 corresponds to the constant named "Gelb"
+colors_Constants[3] = 4 corresponds to the constant named "Grün"
+colors_Constants[4] = 5 corresponds to the constant named "Rot"
+colors_Constants[5] = 6 corresponds to the constant named "Blau"
+colors_Constants[6] = 2 corresponds to the constant named "Weiss"
 List of values constants:
-values_Constants[0] = 3.141593 translating to "pi"
-values_Constants[1] = 6.283185 translating to "pi2"
-values_Constants[2] = 9.424778 translating to "pi3"
-values_Constants[3] = 12.566371 translating to "pi4"
-values_Constants[4] = 3.141593 translating to "pi"
-values_Constants[5] = 31.415927 translating to "pi10"
+values_Constants[0] = 3.141593 corresponds to the constant named "pi"
+values_Constants[1] = 6.283185 corresponds to the constant named "pi2"
+values_Constants[2] = 9.424778 corresponds to the constant named "pi3"
+values_Constants[3] = 12.566371 corresponds to the constant named "pi4"
+values_Constants[4] = 3.141593 corresponds to the constant named "pi"
+values_Constants[5] = 31.415927 corresponds to the constant named "pi10"
 ```
 
 #### License ####
