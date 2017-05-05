@@ -2,7 +2,7 @@
 
 **enums** uses go generate functionality to produce text/template encoded go files within the same folder, that hold the enum like constant constructs.
 
-in contrast to other approaches **enums** parses a special comment section to compose the enum type definition - instead of AST parsing to get the specs. **enums** will create a go file in the same folder sharing the package name and including all code lines to implement the enum. therefore the the enum's name, type and const definition should not be given in the code go file that calls the generator. 
+in contrast to other approaches **enums** parses a special comment section to compose the enum type definition - instead of AST parsing to get the specs. **enums** will create a go file in the same folder sharing the package name and including all code lines to implement the enum. therefore the the enum's name, type and const definition should not be given in the code of the go file that calls the generator - otherwise a build error because of duplicate definition might occur. 
 
 **enums** deals with double values by commenting out lines that hinder building the output file. try out the example to learn more. 
 
