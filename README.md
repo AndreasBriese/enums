@@ -1,4 +1,4 @@
-## enums : a Go enum generator ##
+## **enums**: a Go enum generator ##
 
 **enums** uses go generate functionality to produce text/template encoded go files within the same folder, that hold the enum like constant constructs.
 
@@ -7,7 +7,7 @@ in contrast to other approaches **enums** parses a special comment section to co
 #### load & install ####
 
 ```golang
-    go get -u github.com/AndreasBriese/enums
+  $ go get -u github.com/AndreasBriese/enums
 ```
 
 #### usage ####
@@ -28,10 +28,10 @@ for the enum(s) to be generated include a line `//go:generate enums $GOFILE` in 
 
 ```
 
-from this the running 
+#### call #### 
 
 ```golang
-	go generate
+  $ go generate
 ```
 
 in the same folder will result in a file "colors_enums.go" that holds this code:
@@ -67,8 +67,11 @@ func (t colors) String() string {
 }
 ```
 
-colors has got a method String() satsfying the interface `fmt.Stringer` to print out the color names and `colors_Constant` can be used to loop over the enum   
+colors has got a method String() satisfying the interface `fmt.Stringer` to print out the color names and an array `colors_Constants` that can be used to loop over the enum i.e. to search for a color constant.   
 
 note that eventually all information on the type will be public if given a Uppercase type name in the encoding section. 
 
+#### License ####
+
+MIT-License
 
