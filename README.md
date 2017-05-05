@@ -28,7 +28,13 @@ for the enum(s) to be generated include a line `//go:generate enums $GOFILE` in 
 
 ```
 
-from this **enums** will result in a file "colors_enums.go" that holds this code:
+from this the running 
+
+```golang
+	go generate
+```
+
+in the same folder will result in a file "colors_enums.go" that holds this code:
 
 ```golang
 
