@@ -12,6 +12,8 @@ in contrast to other approaches **enums** parses a special comment section to co
   $ go get -u github.com/AndreasBriese/enums
 ```
 
+make shure enums is installed at a location that is included in $PATH - otherwise go generate migth result in an cmd-not-found-error.
+
 #### usage ####
 
 for the enum(s) to be generated include a line `//go:generate enums $GOFILE` in your go file and in the same file give the enum(s) specifics in a commented out block starting with `// [@enums` and ending with `// @]` like the below:
