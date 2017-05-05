@@ -12,7 +12,7 @@ in contrast to other approaches **enums** parses a special comment section to co
   $ go get -u github.com/AndreasBriese/enums
 ```
 
-make shure enums is installed at a location that is included in $PATH - otherwise go generate migth result in an cmd-not-found-error.
+make shure **enums** is installed at a location (usually $GOBIN) that is included in $PATH - otherwise `go generate` migth fail with a cmd-not-found-error.
 
 #### usage ####
 
